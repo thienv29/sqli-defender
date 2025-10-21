@@ -266,3 +266,57 @@ a {
     color: black !important;
     font-weight: bold;
 }
+
+/* Two-column layout for demo pages */
+.demo-content {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.left-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.right-column {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .demo-content {
+        flex-direction: column;
+    }
+}
+
+/* Additional styles for explanations */
+.vulnerable-section {
+    background: #fff5f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #dc3545;
+}
+
+.safe-section {
+    background: #f0fff0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #28a745;
+}
+
+.red { color: #dc3545; }
+.green { color: #28a745; }
+
+.real-case {
+    background: rgba(220, 53, 69, 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
