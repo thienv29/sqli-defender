@@ -8,16 +8,10 @@
     <link rel="stylesheet" href="css/search.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <a href="index.php" class="navbar-brand">🔒 SQLi Defender</a>
-        <ul class="navbar-nav">
-            <li><a href="vuln_login.php">🔓 Bypass đăng nhập</a></li>
-            <li><a href="safe_login.php">🛡️ Phiên bản an toàn</a></li>
-            <li><a href="search.php" class="active">🔍 UNION SQLi</a></li>
-            <li><a href="blind.php">👁️ Blind SQLi</a></li>
-        </ul>
-    </nav>
+    <?php
+    include 'nav.php';
+    echo getNavbar('search.php');
+    ?>
 
     <div class="container">
         <div class="header">

@@ -8,16 +8,10 @@
     <link rel="stylesheet" href="css/vuln_login.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <a href="index.php" class="navbar-brand">🔒 SQLi Defender</a>
-        <ul class="navbar-nav">
-            <li><a href="vuln_login.php" class="active">🔓 Bypass đăng nhập</a></li>
-            <li><a href="safe_login.php">🛡️ Phiên bản an toàn</a></li>
-            <li><a href="search.php">🔍 UNION SQLi</a></li>
-            <li><a href="blind.php">👁️ Blind SQLi</a></li>
-        </ul>
-    </nav>
+    <?php
+    include 'nav.php';
+    echo getNavbar('vuln_login.php');
+    ?>
 
     <div class="container">
         <div class="header">
