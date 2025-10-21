@@ -138,20 +138,21 @@
                     <h3>🔍 SQL Query Được Thực Thi</h3>
                     <button onclick="closeSQL()" class="close-modal">&times;</button>
                 </div>
-        <div class="sql-modal-body">
-            <div class="sql-warning">
-                ⚠️ CẢNH BÁO: Đây là SQL query nguy hiểm! Input chứa trong LIKE pattern.
+                <div class="sql-modal-body">
+                    <div class="sql-warning">
+                        ⚠️ CẢNH BÁO: Đây là SQL query nguy hiểm! Input chứa trong LIKE pattern.
+                    </div>
+                    <div class="sql-display">
+                        <div class="sql-label">Query sẽ thực thi:</div>
+                        <div class="sql-code-display" id="sqlDisplay"></div>
+                    </div>
+                    <div class="sql-explanation">
+                        <p><strong>Cách hoạt động:</strong></p>
+                        <p>Input được nhồi vào <strong>LIKE '%...%'</strong> query.</p>
+                        <p>UNION attack có thể extract data từ tất cả tables!</p>
+                    </div>
+                </div>
             </div>
-            <div class="sql-display">
-                <div class="sql-label">Query sẽ thực thi:</div>
-                <div class="sql-code-display" id="sqlDisplay"></div>
-            </div>
-            <div class="sql-explanation">
-                <p><strong>Cách hoạt động:</strong></p>
-                <p>Input được nhồi vào <strong>LIKE '%...%'</strong> query.</p>
-                <p>UNION attack có thể extract data từ tất cả tables!</p>
-            </div>
-        </div>
         </div>
 
         <!-- Education Modal -->
@@ -246,7 +247,6 @@
 
             document.getElementById('sqlDisplay').textContent = sql;
             document.getElementById('sqlModal').style.display = 'block';
-            document.getElementById('educationModal').style.display = 'none';
         }
 
         function closeSQL() {
@@ -255,7 +255,6 @@
 
         function showEducation() {
             document.getElementById('educationModal').style.display = 'block';
-            document.getElementById('sqlModal').style.display = 'none';
         }
 
         function closeEducation() {

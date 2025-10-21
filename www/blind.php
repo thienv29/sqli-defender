@@ -155,20 +155,21 @@
                     <h3>👁️ SQL Query Được Thực Thi</h3>
                     <button onclick="closeSQL()" class="close-modal">&times;</button>
                 </div>
-        <div class="sql-modal-body">
-            <div class="sql-warning">
-                ⚠️ CẢNH BÁO: Đây là SQL query nguy hiểm! Input chứa trong WHERE condition.
+                <div class="sql-modal-body">
+                    <div class="sql-warning">
+                        ⚠️ CẢNH BÁO: Đây là SQL query nguy hiểm! Input chứa trong WHERE condition.
+                    </div>
+                    <div class="sql-display">
+                        <div class="sql-label">Query sẽ thực thi:</div>
+                        <div class="sql-code-display" id="sqlDisplay"></div>
+                    </div>
+                    <div class="sql-explanation">
+                        <p><strong>Cách hoạt động:</strong></p>
+                        <p>Input nhồi vào <strong>WHERE id = ...</strong> query.</p>
+                        <p>Blind attack dựa vào TRUE/FALSE để extract toàn bộ data!</p>
+                    </div>
+                </div>
             </div>
-            <div class="sql-display">
-                <div class="sql-label">Query sẽ thực thi:</div>
-                <div class="sql-code-display" id="sqlDisplay"></div>
-            </div>
-            <div class="sql-explanation">
-                <p><strong>Cách hoạt động:</strong></p>
-                <p>Input nhồi vào <strong>WHERE id = ...</strong> query.</p>
-                <p>Blind attack dựa vào TRUE/FALSE để extract toàn bộ data!</p>
-            </div>
-        </div>
         </div>
 
         <!-- Education Modal -->
@@ -266,7 +267,6 @@
 
             document.getElementById('sqlDisplay').textContent = sql;
             document.getElementById('sqlModal').style.display = 'block';
-            document.getElementById('educationModal').style.display = 'none';
         }
 
         function closeSQL() {
@@ -275,7 +275,6 @@
 
         function showEducation() {
             document.getElementById('educationModal').style.display = 'block';
-            document.getElementById('sqlModal').style.display = 'none';
         }
 
         function closeEducation() {
@@ -288,8 +287,7 @@
             const eduModal = document.getElementById('educationModal');
             if (event.target == sqlModal) {
                 sqlModal.style.display = 'none';
-            }
-            if (event.target == eduModal) {
+            } else if (event.target == eduModal) {
                 eduModal.style.display = 'none';
             }
         }
