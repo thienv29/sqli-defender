@@ -1,0 +1,207 @@
+/* Vulnerable Login Page Specific Styles */
+
+body {
+    background-color: #dc3545;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.description {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.show-sql-btn {
+    background-color: #17a2b8;
+}
+
+/* SQL Query Modal Styling */
+.sql-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sql-modal-content {
+    background-color: white;
+    color: #333;
+    margin: 15% auto;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sql-modal-header {
+    background-color: #dc3545;
+    color: white;
+    padding: 20px;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sql-modal-header h3 {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.sql-modal-body {
+    padding: 25px;
+}
+
+.sql-warning {
+    background-color: #ffc107;
+    color: #212529;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.sql-display {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sql-label {
+    color: #17a2b8;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.sql-code-display {
+    background-color: #343a40;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    word-wrap: break-word;
+    font-size: 1em;
+    line-height: 1.4;
+    border: 1px solid #495057;
+}
+
+.sql-explanation {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #17a2b8;
+}
+
+.sql-explanation strong {
+    color: #dc3545;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #495057;
+}
+
+.btn {
+    background: #007bff;
+    margin-top: 10px;
+}
+
+.result-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.payload-hint {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    border-left: 4px solid #dc3545;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .title {
+        font-size: 2em;
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        display: block;
+        margin: 10px 0;
+    }
+}
