@@ -25,8 +25,8 @@
 
         <div class="vulnerable-section">
             <h3 class="red">🚨 PHƯƠNG PHÁP LỖ HỔNG</h3>
-            <p><strong>Ghép chuỗi trực tiếp trong LIKE query</strong></p>
-            <p><code>$sql = "SELECT username, email FROM users WHERE username LIKE '%$q%'";</code></p>
+            <p><strong>Ghép chuỗi trực tiếp trong WHERE query</strong></p>
+            <p><code>$sql = "SELECT username, email FROM users WHERE username = '$q'";</code></p>
             <p>UNION có thể rò rỉ dữ liệu từ nhiều bảng khác nhau.</p>
         </div>
 
@@ -66,8 +66,8 @@
                 if ($conn->connect_error) {
                     echo '<div class="no-results">Kết nối cơ sở dữ liệu thất bại</div>';
                 } else {
-                    // ⚠️ LỖ HỔNG: Ghép chuỗi trực tiếp
-                    $sql = "SELECT username, email FROM users WHERE username LIKE '%$q%'";
+                    // ⚠️ LỖ HỔNG: Ghép chuỗi trực tiếp - Modified to demonstrate UNION injection
+                    $sql = "SELECT username, email FROM users WHERE username = '$q'";
                     $res = $conn->query($sql);
 
                     $resultsCount = $res ? $res->num_rows : 0;
@@ -75,6 +75,7 @@
                     <div class="results-header">
                         <div class="results-title">Kết quả tìm kiếm cho: "<?php echo htmlspecialchars($q); ?>"</div>
                         <div class="results-count"><?php echo $resultsCount; ?> kết quả được tìm thấy</div>
+                        <div class="union-notice">💡 UNION injection giờ có thể rò rỉ dữ liệu!</div>
                     </div>
 
                     <?php if ($res && $resultsCount > 0): ?>
@@ -243,7 +244,7 @@
         <script>
         function showSQL() {
             const query = document.querySelector('input[name="q"]').value || '[từ_khoá_trống]';
-            const sql = `SELECT username, email FROM users WHERE username LIKE '%${query}%'`;
+            const sql = `SELECT username, email FROM users WHERE username = '${query}'`;
 
             document.getElementById('sqlDisplay').textContent = sql;
             document.getElementById('sqlModal').style.display = 'block';

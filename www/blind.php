@@ -29,7 +29,7 @@
             <p><code>$sql = "SELECT id FROM users WHERE id = $id AND role = 'admin'";</code></p>
             <p>Không yêu cầu hiển thị data, chỉ cần TRUE/FALSE response.</p>
         </div>
-
+<!-- 
         <div class="user-info">
             <div class="user-info-title">👥 Người dùng test trong cơ sở dữ liệu:</div>
             <div class="user-list">
@@ -44,7 +44,7 @@
                     <div class="user-role">Vai trò: admin</div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="check-form">
             <form method="get">
