@@ -266,6 +266,7 @@
 
             document.getElementById('sqlDisplay').textContent = sql;
             document.getElementById('sqlModal').style.display = 'block';
+            document.getElementById('educationModal').style.display = 'none';
         }
 
         function closeSQL() {
@@ -274,6 +275,7 @@
 
         function showEducation() {
             document.getElementById('educationModal').style.display = 'block';
+            document.getElementById('sqlModal').style.display = 'none';
         }
 
         function closeEducation() {

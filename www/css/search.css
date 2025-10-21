@@ -156,7 +156,7 @@ body {
 .sql-modal-content {
     background-color: white;
     color: #333;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -177,6 +177,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .sql-modal-header h3 {
@@ -189,11 +190,15 @@ body {
     background: none;
     border: none;
     color: #212529;
-    font-size: 1.8em;
+    font-size: 2em;
     cursor: pointer;
     padding: 0;
     margin: 0;
     line-height: 1;
+}
+
+.close-modal:hover {
+    color: #e0a800;
 }
 
 .sql-modal-body {

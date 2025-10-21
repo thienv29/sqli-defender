@@ -246,6 +246,7 @@
 
             document.getElementById('sqlDisplay').textContent = sql;
             document.getElementById('sqlModal').style.display = 'block';
+            document.getElementById('educationModal').style.display = 'none';
         }
 
         function closeSQL() {
@@ -254,6 +255,7 @@
 
         function showEducation() {
             document.getElementById('educationModal').style.display = 'block';
+            document.getElementById('sqlModal').style.display = 'none';
         }
 
         function closeEducation() {
@@ -266,8 +268,7 @@
             const eduModal = document.getElementById('educationModal');
             if (event.target == sqlModal) {
                 sqlModal.style.display = 'none';
-            }
-            if (event.target == eduModal) {
+            } else if (event.target == eduModal) {
                 eduModal.style.display = 'none';
             }
         }
