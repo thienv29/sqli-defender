@@ -108,12 +108,6 @@
             <p>❌ <code>admin' OR '1'='1</code> sẽ thất bại tại đây!</p>
         </div>
 
-        <div class="nav-links">
-            <a href="index.php">🏠 Trang chủ</a>
-            <a href="vuln_login.php">🔓 Phiên bản lỗ hổng</a>
-            <a href="search.php">🔍 UNION SQLi</a>
-            <a href="blind.php">👁️ Blind SQLi</a>
-        </div>
     </div>
 </body>
 </html>

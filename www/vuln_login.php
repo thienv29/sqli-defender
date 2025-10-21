@@ -147,12 +147,7 @@
         }
         </script>
 
-        <div class="nav-links">
-            <a href="index.php">🏠 Trang chủ</a>
-            <a href="safe_login.php">🛡️ Phiên bản an toàn</a>
-            <a href="search.php">🔍 UNION SQLi</a>
-            <a href="blind.php">👁️ Blind SQLi</a>
-        </div>
+
     </div>
 </body>
 </html>

@@ -182,12 +182,6 @@
         }
         </script>
 
-        <div class="nav-links">
-            <a href="index.php">🏠 Trang chủ</a>
-            <a href="vuln_login.php">🔓 Bypass đăng nhập</a>
-            <a href="safe_login.php">🛡️ Phiên bản an toàn</a>
-            <a href="search.php">🔍 UNION SQLi</a>
-        </div>
     </div>
 </body>
 </html>
