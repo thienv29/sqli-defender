@@ -320,3 +320,126 @@ a {
     border-radius: 6px;
     margin-bottom: 10px;
 }
+
+/* SQL Education Modal Styles */
+.sql-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sql-modal-content {
+    background-color: white;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.sql-modal-header {
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #dc3545;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.sql-modal-header h3 {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 2.5em;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: #c82333;
+}
+
+.sql-modal-body {
+    padding: 25px;
+    overflow-y: auto;
+    flex: 1;
+    max-height: calc(90vh - 80px); /* Subtract header height */
+}
+
+.sql-education {
+    line-height: 1.6;
+}
+
+.sql-education h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee;
+}
+
+.sql-education h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.sql-education p {
+    margin-bottom: 15px;
+}
+
+.sql-education ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.sql-education li {
+    margin-bottom: 8px;
+}
+
+.sql-education code {
+    background-color: #f1f1f1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.sql-education table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+}
+
+.sql-education th, .sql-education td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+}
+
+.sql-education th {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
